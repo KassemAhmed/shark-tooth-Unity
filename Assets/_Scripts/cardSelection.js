@@ -2,9 +2,10 @@ var hit : RaycastHit;
 
 var particlePoof : GameObject;
 
-var matchSound : AudioSource;
+//var matchSound : AudioSource;
 var cardFlipUp : AudioSource;
 var cardFlipDown : AudioSource;
+var counter: int;
 
 //var timeGUI : GUIText;
 //var scoreGUI : GUIText;
@@ -14,7 +15,7 @@ var loseGUI : GUITexture;
 var matchOne : GameObject;
 var matchTwo : GameObject;
 
-var cardsLeft = 20;
+var cardsLeft = 8;
 //var timeLeft = 180;
 //var timeTotal = 180;
 //var score = 0;
@@ -45,8 +46,9 @@ while (true)
 			else
 			{
 				yield revealCardTwo();
-				if (cardsLeft == 0) 
+				if (cardsLeft <= 12) 
 				{
+					Debug.Log ("It Gets Here");
 					yield gameWon();
 				}
 			}
@@ -114,25 +116,29 @@ function revealCardTwo()
 		Destroy (matchTwo);
 
 		cardsLeft -= 2;
+		Debug.Log (cardsLeft);
 		//score += (timeTotal - (timeTotal - timeLeft));
 		//scoreGUI.text = "" + score;
 		
 		// Instantiate Particles if the two cards match and Destroy them 2 seconds later...
 		
-		matchSound.Play();
+		//matchSound.Play();
 		
 		
 	}
 	
 	else
 	{
+		counter++;
 		yield new WaitForSeconds (0.5);
 		
 		matchOne.animation.Play("hide");
 		matchTwo.animation.Play("hide");
 		
 		cardFlipDown.Play();
-		
+		if (counter == 3) {
+		yield gameLost();
+		}
 		yield new WaitForSeconds (matchTwo.animation["hide"].length/1.2);
 	}
 	
@@ -146,8 +152,8 @@ function gameWon ()
 	
 	winGUI.gameObject.SetActive(true);
 	
-	matchSound.pitch = 0.5;
-	matchSound.Play();
+	//matchSound.pitch = 0.5;
+	//matchSound.Play();
 	
 	yield new WaitForSeconds (3);
 	Destroy (this);

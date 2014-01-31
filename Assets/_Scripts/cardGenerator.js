@@ -3,10 +3,10 @@
 var cardLocations =	new Array 
 ( 
 	Vector3 (-1.8, 0, 0), Vector3(-0.6, 0, 0), Vector3(0.6, 0, 0), Vector3(1.8, 0, 0),
-	Vector3 (-1.8, 0, -1.2), Vector3(-0.6, 0, -1.2), Vector3(0.6, 0, -1.2), Vector3(1.8, 0, -1.2), 
-	Vector3 (-1.8, 0, -2.4), Vector3(-0.6, 0, -2.4), Vector3(0.6, 0, -2.4), Vector3(1.8, 0, -2.4), 
-	Vector3 (-1.8, 0, -3.6), Vector3(-0.6, 0, -3.6), Vector3(0.6, 0, -3.6), Vector3(1.8, 0, -3.6), 
-	Vector3 (-1.8, 0, -4.8), Vector3(-0.6, 0, -4.8), Vector3(0.6, 0, -4.8), Vector3(1.8, 0, -4.8)  
+	Vector3 (-1.8, 0, -1.2), Vector3(-0.6, 0, -1.2), Vector3(0.6, 0, -1.2), Vector3(1.8, 0, -1.2) 
+	//Vector3 (-1.8, 0, -2.4), Vector3(-0.6, 0, -2.4), Vector3(0.6, 0, -2.4), Vector3(1.8, 0, -2.4), 
+	//Vector3 (-1.8, 0, -3.6), Vector3(-0.6, 0, -3.6), Vector3(0.6, 0, -3.6), Vector3(1.8, 0, -3.6), 
+	//Vector3 (-1.8, 0, -4.8), Vector3(-0.6, 0, -4.8), Vector3(0.6, 0, -4.8), Vector3(1.8, 0, -4.8)  
 );
 				
 var allCards : GameObject;

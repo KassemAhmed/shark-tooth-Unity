@@ -1,21 +1,13 @@
 // When all the cards have been Instantiated they will play an Animation and then Destroy this script to reduce overhead...
 
-private var thisShadowPlane : GameObject;
 
 function Start ()
 {            
-    var findShadowPlane : Array = transform.parent.gameObject.GetComponentsInChildren (Transform);
 
-    for(var i=0;i<findShadowPlane.Count;i++)
-    {
-        if((findShadowPlane[i] as Transform).gameObject.name.Equals("shadowPlane(Clone)"))
-        {
-            thisShadowPlane = (findShadowPlane[i] as Transform).gameObject;
-        }
-    }
-    
+	// Start the fuction called reveal (??)
     yield StartCoroutine ("reveal");
     
+    // Destroy this script once that has been done
     Destroy (this);
 }
 
@@ -27,7 +19,6 @@ function reveal()
 	
 	yield new WaitForSeconds (0.2);
 	
-	thisShadowPlane.renderer.enabled = false;
 	
 	// Wait for the animation to have finished
 	
@@ -41,5 +32,4 @@ function reveal()
 		
 	yield new WaitForSeconds (animation["hide"].length/1.2);
 	
-	thisShadowPlane.renderer.enabled = true;
 }

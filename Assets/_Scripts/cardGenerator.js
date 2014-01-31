@@ -11,8 +11,6 @@ var cardLocations =	new Array
 				
 var allCards : GameObject;
 var parentObject : GameObject;
-var shadowPlane : GameObject;
-
 var usedCardLocation;
 
 var uniqueCard = new Array ();
@@ -41,26 +39,18 @@ function Start ()
 	
 	for ( var i=0; i <= cardLocations.length-1; i++)
 	{
+	
 		var thisCardLocation = Random.Range (i, cardLocations.length);
-		
 		usedCardLocation = cardLocations [i];
-		
 		cardLocations [i] = cardLocations [thisCardLocation];
-		
 		cardLocations [thisCardLocation] = usedCardLocation;
 		
 		// Instantiate our Randomized Cards and parent them to empty Game Objects so the animations play in Local Space...
 		
-		var theCard : GameObject = Instantiate (uniqueCard [i/2], Vector3(0,0,0), Quaternion.identity);
-		
-		var theShadow : GameObject = Instantiate (shadowPlane, Vector3(0,-0.05,0), Quaternion.identity);
-		
+		var theCard : GameObject = Instantiate (uniqueCard [i/2], Vector3(0,0,0), Quaternion.identity);		
 		var theParent : GameObject = Instantiate (parentObject, Vector3(0,0,0) , Quaternion.identity);
 		
-		theCard.transform.parent = theParent.transform;
-		
-		theShadow.transform.parent = theParent.transform;
-		
+		theCard.transform.parent = theParent.transform;		
 		theParent.transform.position = cardLocations [i];
 	}
 	

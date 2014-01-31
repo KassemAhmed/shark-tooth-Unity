@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{D6F9A01B-EBDD-C3FE-F8E8-855EE4ED349F}</ProjectGuid>
+	<ProjectGuid>{9F7BC140-FE80-54C2-A630-6872F7161428}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -49,7 +49,6 @@
      <Compile Include="Assets\_Scripts\cardGenerator.js" />
      <Compile Include="Assets\_Scripts\cardReveal.js" />
      <Compile Include="Assets\_Scripts\cardSelection.js" />
-     <None Include="Assets\_Objects\Materials\multiplyCull.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

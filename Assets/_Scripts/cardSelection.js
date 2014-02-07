@@ -3,14 +3,15 @@ var hit : RaycastHit;
 var particlePoof : GameObject;
 
 //var matchSound : AudioSource;
-var cardFlipUp : AudioSource;
-var cardFlipDown : AudioSource;
+//var cardUp : AudioSource;
+//var cardFlipDown : AudioSource;
 var counter: int;
 
 //var timeGUI : GUIText;
 //var scoreGUI : GUIText;
 var winGUI : GUITexture;
 var loseGUI : GUITexture;
+var scriptName : cardGenerator;
 
 var matchOne : GameObject;
 var matchTwo : GameObject;
@@ -73,7 +74,7 @@ function revealCardOne()
 
 	matchOne.animation.Play("reveal");
 	
-	cardFlipUp.Play();
+	//cardFlipUp.Play();
 	
 	yield new WaitForSeconds (0.2);
 	
@@ -90,7 +91,7 @@ function revealCardTwo()
 	
 	matchTwo.animation.Play("reveal");
 	
-	cardFlipUp.Play();
+	//cardFlipUp.Play();
 	
 	yield new WaitForSeconds (0.2);
 	
@@ -135,7 +136,7 @@ function revealCardTwo()
 		matchOne.animation.Play("hide");
 		matchTwo.animation.Play("hide");
 		
-		cardFlipDown.Play();
+		//cardFlipDown.Play();
 		if (counter == 3) {
 		yield gameLost();
 		}
@@ -150,13 +151,14 @@ function gameWon ()
 {
 	// Activate "You Win" GUI if all cards are gone...
 	
-	winGUI.gameObject.SetActive(true);
+	//winGUI.gameObject.SetActive(true);
 	
 	//matchSound.pitch = 0.5;
 	//matchSound.Play();
-	
+	scriptName.Start();
+
 	yield new WaitForSeconds (3);
-	Destroy (this);
+	//Destroy (this);
 }
 
 function gameLost ()
@@ -165,5 +167,5 @@ function gameLost ()
 	
 	loseGUI.gameObject.SetActive(true);
 	yield WaitForSeconds (3);
-	Destroy (this);
+	//Destroy (this);
 }

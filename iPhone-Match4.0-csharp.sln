@@ -1,23 +1,19 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{1E764A09-7109-115F-C879-589E2C8991BF}") = "iPhone-Match4.0", "Assembly-CSharp-Editor-vs.csproj", "{661966CF-1663-529E-91CB-37D6F51706DC}"
-EndProject
+
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{661966CF-1663-529E-91CB-37D6F51706DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{661966CF-1663-529E-91CB-37D6F51706DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{661966CF-1663-529E-91CB-37D6F51706DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{661966CF-1663-529E-91CB-37D6F51706DC}.Release|Any CPU.Build.0 = Release|Any CPU
+
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-				GlobalSection(MonoDevelopProperties) = preSolution
+							GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

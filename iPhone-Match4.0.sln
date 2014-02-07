@@ -1,8 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{1E764A09-7109-115F-C879-589E2C8991BF}") = "iPhone-Match4.0", "Assembly-CSharp-Editor.csproj", "{661966CF-1663-529E-91CB-37D6F51706DC}"
-EndProject
 Project("{1E764A09-7109-115F-C879-589E2C8991BF}") = "iPhone-Match4.0", "Assembly-UnityScript.unityproj", "{D6F9A01B-EBDD-C3FE-F8E8-855EE4ED349F}"
 EndProject
 Global
@@ -11,10 +9,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{661966CF-1663-529E-91CB-37D6F51706DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{661966CF-1663-529E-91CB-37D6F51706DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{661966CF-1663-529E-91CB-37D6F51706DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{661966CF-1663-529E-91CB-37D6F51706DC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D6F9A01B-EBDD-C3FE-F8E8-855EE4ED349F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D6F9A01B-EBDD-C3FE-F8E8-855EE4ED349F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6F9A01B-EBDD-C3FE-F8E8-855EE4ED349F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -23,7 +17,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-			GlobalSection(MonoDevelopProperties) = preSolution
+						GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
